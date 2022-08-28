@@ -1,0 +1,56 @@
+.banner-imgBox{
+    width: 910px;
+    height: 500px;
+    /*background-color: #009dda;*/
+    margin: 0 auto;
+    position: static;
+    overflow: hidden;
+    border-radius: 15%;
+
+}
+.banner-imgBox2{
+    width: 910px;
+    height: 500px;
+    display: flex;
+    /*background-color: chartreuse;*/
+    margin: 0 auto;
+    transition: all 0.5s;
+}
+.banner-imgBox2>img{
+    width: 1024px;
+    height: 768px;
+}
+.on{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: gainsboro;
+    margin-left: 20px;
+}
+.banner-imgBox-div{
+    width: 400px;
+    position: relative;
+    bottom: 20px;
+    left: 40%;
+    display: flex;
+}
+.on2{
+    background-color: red;
+}
+/*
+.banner-imgBox-left{
+   position: static;
+    left: 20px;
+    top:48%;
+    width: 48px;
+    height: 48px;
+}
+.banner-imgBox-right{
+    position: static;
+    right: 580px;
+    top:48%;
+    width: 48px;
+    height: 48px;
+   /* margin-right: 0;
+}
+*/

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/主页面.css" />
+    <link rel="stylesheet" href="css/滑动图片.css" />
+    <link rel="stylesheet" href="css/下拉界面.css" />
+    
+    <title>河北经贸大学算法集训队</title>
+  </head>
+  <body>
+    <div class="screen">
+      <div id = "test"></div>
+      <button class="btn" id="start-btn">Go!!!</button>
+    </div>
+    <!-- 导航栏 -->
+    <nav class="nav">
+      <div class="container">
+        <h1 class="logo"><a href="index.html">HEUET-ACM</a></h1>
+        <ul>
+          <li><a href="#" class="current">主页面</a></li>
+          <li><a href="日常活动.html">日常活动</a></li>
+          <li><a href="问题展示.html">常见问题</a></li>
+          <li><a href="路线介绍.html">学习路线介绍</a></li>
+          <li><a href="报名.html">报名</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- 这里包括照片展示和网站标题  -->
+    <div class="hero">
+      <div class="banner-imgBox">
+        <div class="banner-imgBox2" >
+            <img src="./imgs/1.png" alt="">
+            <img src="./imgs/2.png" alt="">
+            <img src="./imgs/3.png" alt="">
+            <img src="./imgs/4.png" alt="">
+            <img src="./imgs/5.png" alt="">
+        </div>
+        <div class="banner-imgBox-div">
+            <div class="on" onclick="marginLeft(false)"></div>
+            <div class="on" onclick="marginLeft(false)"></div>
+            <div class="on" onclick="marginLeft(false)"></div>
+            <div class="on" onclick="marginLeft(false)"></div>
+            <div class="on" onclick="marginLeft(false)"></div>
+        </div>
+        <img class="banner-imgBox-left" src="../../imgs/arrow-left-circle-fill.png" onclick="marginLeft(false)">
+        <img class="banner-imgBox-right" src="../../imgs/arrow-right-circle-fill.png" onclick="marginLeft(true)">
+    </div>
+        <div class="container" >
+          <h1>Welcome To HEUET-ACM</h1>
+          <p>Constant dripping wears away the stone</p>
+        </div>
+    </div>
+    <!-- 这里是 一个整体内容的简介 -->
+    <section class="container content">
+      <h2>战队简介</h2>
+      <p>河北经贸大学ACM战队是一个学习、学术、钻研型的校级组织，在教练的带领下，同学们刻苦钻研，分别斩获蓝桥杯省一、蓝桥杯国赛二三等、团体程序设计竞赛天梯赛省奖、河北省程序设计大赛等多种奖项。ACM战队以学习算法、提高编程能力，提升个人知识素养为宗旨，以培养高素质、高水平人才为目标，通过各类程序设计竞赛和编程挑战赛等省级、国家级赛事，不断训练和丰富自己，训练体系逐步完善，训练制度和训练成果日趋向好。我们战队配有专门的独立的训练教室和专业的教练团队，定期队内进行集中训练和学习，加入我们，一起参加各类程序设计大赛，一起学习一起进步！</p>
+
+      <h3>Content Two</h3>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur provident nostrum possimus inventore nisi laboriosam consequatur modi nulla eos, commodi, omnis distinctio! Maxime distinctio impedit provident, voluptates illo odio nostrum minima beatae similique a sint sapiente voluptatum atque optio illum est! Tenetur tempora doloremque quae iste aperiam hic cumque repellat?</p>
+    </section>
+    <!-- 这里是一个底部 用来放一些个网站介绍-->
+    <footer class="tail">
+      <div class="thanks">
+        <span>
+          设计 & 网站实现 ：梁国栋 
+        </span>
+        <br>
+        <span> 
+          监制 & 内容指导 ：孙雨桐
+        </span>
+      </div>
+      <div class="thank">
+      <ul>
+        <span><a href="#">联系我们</a></span>
+        <br>
+        <span><a href="#">更好的建议</a></span>
+      </ul>
+      </div>
+    </footer>
+    <script src="js/下拉界面.js"></script>
+    <script src="js/主页面.js"></script>
+    <script src="js/滑动图片.js"></script>
+    <script src="js/字母顺序出现.js"></script>
+    <script src="../报名页面/注册信息储存.php"></script>
+  </body>
+</html>
+  

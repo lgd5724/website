@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>日常活动</title>
+<style>
+	*{margin:0; padding:0;}
+	body,html{width:100%; height:100%;}
+	.bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.bg-box-1{
+		font-size: 19px;
+		font-family: "楷体";
+		color: rgb(63, 60, 65);
+		font-weight: 700;
+		background: url('imgs/img-1.jpg') no-repeat center/cover;
+	}
+	.bg-box-1 .one,.two,.three{
+		position: absolute;
+		top: 50px;
+		left: 350px;
+		right: 250px;
+	}
+	.bg-box-2{
+		font-size: 19px;
+		font-family: "楷体";
+		color: rgb(63, 59, 67);
+		font-weight: 700;
+		background: url('imgs/img-2.jpg') no-repeat center/cover;
+	}
+	.bg-box-3{
+		font-size: 19px;
+		font-family: "楷体";
+		color: rgb(191, 188, 193);
+		font-weight: 700;
+		background: url('imgs/img-3.jpg') no-repeat center/cover;
+	}
+	/*
+	.bg-box-4{
+		background: url('img/4.jpg') no-repeat center/cover;
+	}
+	*/
+	#wrap{
+		position: absolute;
+		overflow: hidden;
+		top:0; left:0; right:0; bottom:0;
+		margin:auto;
+		width: 1000px;
+		height: 400px;
+	}
+	#wrap > ul{
+		width: 120%;
+		list-style: none;
+	}
+	#wrap > ul > li{
+		float: left;
+		width: 100px;
+		height: 400px;
+		cursor: pointer;
+	}
+	#wrap > ul > li:nth-child(1){
+		background: url('imgs/img-1.jpg') no-repeat center/cover;
+	}
+	#wrap > ul > li:nth-child(2){
+		background: url('imgs/img-2.jpg') no-repeat center/cover;
+	}
+	#wrap > ul > li:nth-child(3){
+		background: url('imgs/img-3.jpg') no-repeat center/cover;
+	}
+	/*
+	#wrap > ul > li:nth-child(4){
+		background: url('img/4.jpg') no-repeat center/cover;
+		width: 700px;
+	}	
+	*/
+	#wrap > ul > li > .text{
+		width: 100px;
+		height: 100%;
+		background: #000;
+		opacity: .5;
+	}
+	#wrap > ul > li > .text p{
+		padding: 20px 40px;
+		font-family: 'Microsoft yahei';
+		color: #fff;
+	}
+	#wrap > ul > li > .one
+	{
+		position: relative;
+		left: 30px;
+		top: 20px;
+	}
+</style>
+</head>
+<body>
+
+<div class="bg bg-box-1">
+	<div class="one">
+		战队每个周末都会进行集训测试，队内进行全队的算法比赛，互相排名，“逐鹿天下”
+	</div>
+</div>
+<div class="bg bg-box-2">
+	<div class="two">
+		战队每个学期都会不定期进行算法交流会，主要通过战队成员自发分享自己在学习算法时的遇到的一些问题和解决办法，
+	互相讨论和分享解决问题的经验和措施，互相补强。
+	</div>
+</div>
+<div class="bg bg-box-3">
+	<div class="three">
+		作为战队的主要任务，参与各类大学生算法程序设计大赛是每一个战队成员首先要做并且要做好的事情，
+	每年都会有很多很多的比赛供我们参与，比如蓝桥杯、河北省程序设计大赛、团体程序设计竞赛天梯赛、
+	国际大学生程序设计大赛等，在每一次赛前都会有一到两周的集中训练和团体会议。
+	</div>
+</div>
+<!--
+<div class="bg bg-box-4">
+粉色各色GH和HSH和无色嘎嘎
+</div>
+-->
+<div id="wrap">
+	<ul>
+		<li>
+			<div class="text">
+				<p>周末集训</p>
+			</div>
+		</li>
+		<li>
+			<div class="text">
+				<p>算法交流会</p>
+			</div>
+		</li>
+		<li>
+			<div class="text">
+				<p>参与各类赛事</p>
+			</div>
+		</li>
+		<!--
+		<li class="curr">
+			<div class="text">
+				<p>尼尔机械纪元4</p>
+			</div>
+		</li>
+		-->
+	</ul>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+(function(){
+	$('#wrap li').mouseover(function(){
+		if(!$(this).hasClass('curr')){
+			$('#wrap li').removeClass('curr');
+			$(this).addClass('curr');
+
+			// 切换背景
+			$('#wrap li').each(function(index){
+				if($(this).hasClass('curr')){
+					$('.bg').fadeOut(300);
+					$('.bg:eq(' + index + ')').fadeIn(500);
+				}
+			});
+
+			$('.curr').stop().animate({
+				width: 700
+			}, 500, 'linear');
+			$('#wrap li').not('.curr').stop().animate({
+				width: 100
+			}, 500, 'linear');
+		}
+	});
+})()
+</script>
+
+</body>
+</html>
